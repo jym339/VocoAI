@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;450;600;750&family=Outfit:wght@600;800;900&family=JetBrains+Mono:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #020617; /* slate-950 */
+  color: #f8fafc; /* slate-50 */
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Bold Typography Outline Text Utility */
+.outline-text {
+  -webkit-text-stroke: 1.5px #475569; /* slate-600 */
+  color: transparent;
+  transition: -webkit-text-stroke 0.3s ease;
+}
+
+.outline-text:hover {
+  -webkit-text-stroke: 1.5px #3b82f6; /* blue-500 */
+}
+
+/* Custom scrolling list */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+/* Standard animation frames for simulator dots */
+@keyframes bounce1 {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+@keyframes bounce2 {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+.animate-bounce1 {
+  animation: bounce1 0.8s infinite ease-in-out;
+}
+.animate-bounce2 {
+  animation: bounce1 0.8s infinite ease-in-out;
+  animation-delay: 0.3s;
+}
+

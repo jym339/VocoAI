@@ -1,0 +1,6 @@
+{
+  "name": "VocoAI - AI HVAC Assistant",
+  "description": "Stop losing commercial HVAC jobs to missed calls. Secure instant booking receptionists configured for top HVAC operators.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

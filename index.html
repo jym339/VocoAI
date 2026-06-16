@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Google AI Studio App</title>
+    <script>
+      // Safe guard to ensure window.fetch can be modified by third-party polyfills or runtime proxies.
+      // This defines a dynamic getter/setter that allows assignment even if the original property was getter-only.
+      try {
+        let currentFetch = window.fetch || (typeof Window !== 'undefined' && Window.prototype ? Window.prototype.fetch : null);
+        const targets = [window];
+        if (typeof Window !== 'undefined' && Window.prototype) {
+          targets.push(Window.prototype);
+        }
+        
+        targets.forEach(obj => {
+          try {
+            const desc = Object.getOwnPropertyDescriptor(obj, 'fetch');
+            if (!desc || desc.configurable) {
+              Object.defineProperty(obj, 'fetch', {
+                get() {
+                  return currentFetch;
+                },
+                set(newValue) {
+                  currentFetch = newValue;
+                },
+                configurable: true,
+                enumerable: true
+              });
+            }
+          } catch (e) {}
+        });
+      } catch (err) {
+        console.warn("Could not redefine window.fetch property descriptor:", err);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
