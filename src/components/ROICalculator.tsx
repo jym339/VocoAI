@@ -21,7 +21,7 @@ export default function ROICalculator() {
     const monthlyLostRevenue = monthlyLostJobs * jobValue;
     const annualLostRevenue = Math.round(monthlyLostRevenue * 12);
 
-    // VocoAI captures 98% of calls and speeds up callback response under 5 mins
+    // VocosAI captures 98% of calls and speeds up callback response under 5 mins
     const recoveredCallsWithVoco = Math.round(monthlyMissedLeads * 0.95);
     const recoveredJobsWithVoco = (recoveredCallsWithVoco * (closeRate / 100));
     const recoveredRevenueMonthly = recoveredJobsWithVoco * jobValue;
@@ -182,7 +182,7 @@ export default function ROICalculator() {
             </div>
           </div>
 
-          {/* Saved with Voco Card */}
+          {/* Saved with Vocos Card */}
           <div className="p-6 rounded-2xl bg-emerald-950/15 border border-emerald-900/30 relative overflow-hidden group flex-grow flex flex-col justify-center animate-pulse-slow">
             <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/5 rounded-full blur-2xl transition-all"></div>
             <div className="flex items-start gap-4 relative z-10">
@@ -191,13 +191,13 @@ export default function ROICalculator() {
               </div>
               <div>
                 <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-400 block mb-1 font-mono font-bold">
-                  Recoverable with VocoAI
+                  Recoverable with VocosAI
                 </span>
                 <h4 className="text-4xl font-display font-black text-emerald-100 tracking-tight leading-none mb-2">
                   ${calculations.recoveredRevenueAnnual.toLocaleString()}
                 </h4>
                 <span className="text-emerald-300/85 text-xs block leading-relaxed font-normal">
-                  VocoAI answers <strong>95%+</strong> of overflow and weekend calls. We capture the technician ticket detail & handle calendar bookings in real-time, instantly recovering those escaping clients.
+                  VocosAI answers <strong>95%+</strong> of overflow and weekend calls. We capture the technician ticket detail & handle calendar bookings in real-time, instantly recovering those escaping clients.
                 </span>
                 <div className="mt-4 flex items-center gap-2 text-emerald-400 text-2xs font-bold uppercase tracking-wide">
                   <CheckCircle2 className="w-4 h-4 text-emerald-500" /> Instant Customer Guarantee

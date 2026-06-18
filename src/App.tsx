@@ -20,7 +20,7 @@ export default function App() {
 
   // Calendly Configuration State (defaults to booknow12/consultation-veloxcall, or from env, or saved value)
   const [calendlyUrl, setCalendlyUrl] = useState(() => {
-    const saved = localStorage.getItem("vocoai_calendly_url");
+    const saved = localStorage.getItem("vocosai_calendly_url");
     if (saved) return saved;
     const envUrl = (import.meta as any).env?.VITE_CALENDLY_URL;
     if (envUrl) return envUrl;
@@ -117,7 +117,7 @@ export default function App() {
         <header className="flex flex-col md:flex-row justify-between items-center gap-6 border-b border-slate-900 pb-8">
           <div className="flex items-center gap-3">
             <span className="text-3xl font-black tracking-tighter italic uppercase text-slate-100 hover:opacity-90 transition-opacity">
-              VOCO<span className="text-blue-500">AI</span>
+              VOCOS<span className="text-blue-500">AI</span>
             </span>
             <span className="px-2.5 py-1 bg-slate-900 text-slate-400 border border-slate-800 rounded-md text-[10px] font-mono tracking-widest font-semibold uppercase">
               V4.1 DEV
@@ -175,6 +175,7 @@ export default function App() {
               >
                 Calculate Revenue Leakage
               </a>
+
             </div>
           </div>
 
@@ -193,7 +194,7 @@ export default function App() {
 
               <div className="space-y-4">
                 <h4 className="text-xs font-bold uppercase tracking-widest text-blue-500 font-mono">
-                  Why Contractors Choose VocoAI:
+                  Why Contractors Choose VocosAI:
                 </h4>
                 <div className="space-y-3 text-xs">
                   <div className="flex gap-2.5 items-start">
@@ -294,7 +295,7 @@ export default function App() {
               </div>
 
               <div className="pt-8 text-3xs font-mono text-slate-500 uppercase">
-                VocoAI Dispatch Core • Non-blocking CRM registration active
+                VocosAI Dispatch Core • Non-blocking CRM registration active
               </div>
             </div>
 
@@ -389,7 +390,7 @@ export default function App() {
                         if (newUrl !== null) {
                           const trimmed = newUrl.trim();
                           if (trimmed) {
-                            localStorage.setItem("vocoai_calendly_url", trimmed);
+                            localStorage.setItem("vocosai_calendly_url", trimmed);
                             setCalendlyUrl(trimmed);
                           }
                         }
@@ -490,7 +491,7 @@ export default function App() {
               Under The Hood
             </span>
             <h3 className="text-3xl font-display font-black uppercase text-white tracking-tight">
-              The VocoAI Integration Path
+              The VocosAI Integration Path
             </h3>
           </div>
 
@@ -501,7 +502,7 @@ export default function App() {
               </div>
               <h5 className="font-bold text-white uppercase text-sm tracking-wide">Inbound VoIP Divert</h5>
               <p className="text-xs text-slate-400 leading-relaxed">
-                When your lines are busy, technicians are in crawlspaces, or on weeknights, inbound calls automatically divert to your private Voco AI phone reception proxy trunk after 3 rings.
+                When your lines are busy, technicians are in crawlspaces, or on weeknights, inbound calls automatically divert to your private Vocos AI phone reception proxy trunk after 3 rings.
               </p>
             </div>
 
@@ -540,7 +541,7 @@ export default function App() {
             <div>
               <div className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-2 font-mono">The Solution</div>
               <p className="text-[10px] text-slate-400 uppercase font-bold tracking-wider leading-tight">
-                VocoAI answers 24/7/365, parses HVAC triage detail instantly, and blocks calendar tickets.
+                VocosAI answers 24/7/365, parses HVAC triage detail instantly, and blocks calendar tickets.
               </p>
             </div>
 
@@ -554,7 +555,7 @@ export default function App() {
 
           <div className="text-right shrink-0">
             <p className="text-[10px] text-slate-700 font-mono uppercase tracking-widest">
-              ©2026 VOCOAI TECHNOLOGIES CO. INC.
+              ©2026 VOCOSAI TECHNOLOGIES CO. INC.
             </p>
             <p className="text-[9px] text-slate-800 font-mono tracking-tighter mt-1">
               ALL RIGHTS RESERVED. POWERED BY AI STUDIO APPS.
