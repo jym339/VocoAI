@@ -558,7 +558,7 @@ export default function App() {
               ©2026 VOCOSAI TECHNOLOGIES CO. INC.
             </p>
             <p className="text-[9px] text-slate-800 font-mono tracking-tighter mt-1">
-              ALL RIGHTS RESERVED. POWERED BY AI STUDIO APPS.
+              ALL RIGHTS RESERVED.
             </p>
           </div>
         </footer>
